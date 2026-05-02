@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>間接疑問文</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <close-btn></close-btn>
+        <h1 class="title">間接疑問文</h1>
+
+        <!-- 文法と構文の説明 -->
+        <section>
+            <h2>文法と構文の説明</h2>
+            <p><strong>間接疑問文</strong>は、疑問文が主文の一部として使われる構文です。</p>
+            <p>次のような特徴があります：</p>
+            <ul>
+                <li>疑問詞（<b>what, when, where, who, why</b> など）で始まります。</li>
+                <li>疑問文が主文に含まれるため、<b>主語 + 動詞</b>の語順に従います。</li>
+            </ul>
+            <p>例文:</p>
+            <ul>
+                <li>I don’t know <b>what he wants</b>. （彼が何を欲しいのか私は知らない。）</li>
+                <li>Can you tell me <b>where she lives</b>? （彼女がどこに住んでいるのか教えてくれますか？）</li>
+                <li>I wonder <b>why he left early</b>. （彼がなぜ早く帰ったのか不思議に思う。）</li>
+            </ul>
+        </section>
+
+        <!-- 問題 -->
+        <section>
+            <h2>問題</h2>
+            <p>以下の単語を並び替えて正しい文を作成しましょう。（和訳を参考にしてください）</p>
+            <img src="./eng-indirect-question.png"/>
+
+            <!-- 問題1 -->
+            <div class="mb-3">
+                <p><strong>問題1:</strong> (he / what / wants / I / don’t / know) - 彼が何を欲しいのか私は知らない。</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">解答と解説</button>
+                <div class="collapse" id="answer1">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> I don’t know what he wants。</p>
+                        <p><strong>解説:</strong> 疑問詞 <b>what</b> を使い、間接疑問文の語順（主語 + 動詞）に従っています。</p>
+                        <ul>
+                            <li>I: 私（主語）</li>
+                            <li>don’t: ～ではない（助動詞 + 否定）</li>
+                            <li>know: 知る（動詞）</li>
+                            <li>what: 何（疑問詞）</li>
+                            <li>he: 彼（主語）</li>
+                            <li>wants: 欲しい（動詞の三人称単数形）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問題2 -->
+            <div class="mb-3">
+                <p><strong>問題2:</strong> (can / tell / you / where / lives / she / me/ ?) - 彼女がどこに住んでいるのか教えてくれますか？</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">解答と解説</button>
+                <div class="collapse" id="answer2">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> Can you tell me where she lives?</p>
+                        <p><strong>解説:</strong> 疑問詞 <b>where</b> を使い、間接疑問文の語順に従っています。</p>
+                        <ul>
+                            <li>Can: ～できますか（助動詞）</li>
+                            <li>you: あなた（主語）</li>
+                            <li>tell: 教える（動詞）</li>
+                            <li>me: 私に（目的語）</li>
+                            <li>where: どこ（疑問詞）</li>
+                            <li>she: 彼女（主語）</li>
+                            <li>lives: 住んでいる（動詞の三人称単数形）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問題3 -->
+            <div class="mb-3">
+                <p><strong>問題3:</strong> (why / he / early / I / wonder / left) - 彼がなぜ早く帰ったのか不思議に思う。</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer3">解答と解説</button>
+                <div class="collapse" id="answer3">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> I wonder why he left early。</p>
+                        <p><strong>解説:</strong> 疑問詞 <b>why</b> を使い、間接疑問文の語順を使用しています。</p>
+                        <ul>
+                            <li>I: 私（主語）</li>
+                            <li>wonder: 不思議に思う（動詞）</li>
+                            <li>why: なぜ（疑問詞）</li>
+                            <li>he: 彼（主語）</li>
+                            <li>left: 去った（動詞の過去形）</li>
+                            <li>early: 早く（副詞）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問題4 -->
+            <div class="mb-3">
+                <p><strong>問題4:</strong> (she / when / back / he / doesn’t / be / will / know) - 彼女がいつ戻るか彼は知らない。</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer4">解答と解説</button>
+                <div class="collapse" id="answer4">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> He doesn’t know when she will be back。</p>
+                        <p><strong>解説:</strong> 疑問詞 <b>when</b> を使い、間接疑問文の語順を使用しています。</p>
+                        <ul>
+                            <li>He: 彼（主語）</li>
+                            <li>doesn’t: ～ではない（助動詞 + 否定）</li>
+                            <li>know: 知る（動詞）</li>
+                            <li>when: いつ（疑問詞）</li>
+                            <li>she: 彼女（主語）</li>
+                            <li>will: ～するだろう（助動詞）</li>
+                            <li>be: いる（動詞）</li>
+                            <li>back: 戻る（副詞）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問題5 -->
+            <div class="mb-3">
+                <p><strong>問題5:</strong> (what / about / you / know / he / do / is/ ?) - 彼についてあなたは何を知っていますか？</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer5">解答と解説</button>
+                <div class="collapse" id="answer5">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> Do you know what he is about?</p>
+                        <p><strong>解説:</strong> 疑問詞 <b>what</b> を使い、間接疑問文の語順に従っています。</p>
+                        <ul>
+                            <li>Do: ～しますか（助動詞）</li>
+                            <li>you: あなた（主語）</li>
+                            <li>know: 知る（動詞）</li>
+                            <li>what: 何（疑問詞）</li>
+                            <li>he: 彼（主語）</li>
+                            <li>is: ～です（動詞）</li>
+                            <li>about: ～について（前置詞）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <close-btn></close-btn>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/AnswerAreaIns.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

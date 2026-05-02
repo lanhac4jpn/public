@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>have 「持っている」</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">have 「持っている」</h1>
+
+    <!-- 文法の説明 -->
+    <section class="mt-4">
+        <h2>文法説明</h2>
+        <p>「have」は「持っている」という意味を表す動詞です。主語によって形が変わることに注意しましょう。</p>
+        <ul>
+            <li><strong>主語が I, You, We, They の場合:</strong> have を使う（例: I have a book.）</li>
+            <li><strong>主語が He, She, It の場合:</strong> has を使う（例: He has a car.）</li>
+        </ul>
+    </section>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["a / I / pen / have", "I have a pen.", "私はペンを持っています。"],
+            ["a / lovely / you / have / smile", "You have a lovely smile.", "あなたは素敵な笑顔です。"],
+            ["has / he / blue / a / car", "He has a blue car.", "彼は青い車を持っています。"],
+            ["a / cute / she / has / doll", "She has a cute doll.", "彼女はかわいい人形を持っています。"],
+            ["a / good / we / have / idea", "We have a good idea.", "私たちはよいアイデアを持っています。"],
+            ["many / books / they / have", "They have many books.", "彼らはたくさんの本を持っています。"],
+            ["any / questions / do / you / have", "Do you have any questions?", "質問はありますか？"],
+            ["two / I / brothers / have", "I have two brothers.", "私は弟が2人います。"],
+            ["a / soft / she / has / blanket", "She has a soft blanket.", "彼女はやわらかい毛布を持っています。"],
+            ["a / we / party / today / have", "We have a party today.", "今日は私たちのパーティーです。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>
