@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英文法メニュー</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style-menu.css" rel="stylesheet">
+    <script>
+        function onPageclick(filename) {
+            // 新しいウィンドウを開く
+            let newWindow = window.open(filename, '_blank');
+        }
+    </script>
+</head>
+<body class="container mt-5">
+
+    <button class="title" id="printBtn">印刷</button>
+    <label class="showGrammarOnly">
+      <input type="checkbox" id="showGrammarOnly"> 文法と例文のみ表示
+    </label>
+    
+    <!-- メニュー -->
+    <div class="grammar-category">be動詞 <br>肯: S be動詞～, 疑: be動詞 S～?, 否: S be動詞 not～</div>
+    <h1 class="title" onclick="onPageclick('eng-be-am.html');">be動詞 am</h1>
+    <h1 class="title" onclick="onPageclick('eng-be-are.html');">be動詞 are</h1>
+    <h1 class="title" onclick="onPageclick('eng-be-is.html');">be動詞 is</h1>
+    <h1 class="title" onclick="onPageclick('eng-be-be.html');">be動詞 be</h1>
+    <div class="grammar-category">一般動詞 <br>肯: S 一般動詞～, 疑: Do/Does(助動詞) S 動詞～?, 否: S do/does not 一般動詞～</div>
+    <h1 class="title" onclick="onPageclick('eng-article.html');">冠詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb.html');">一般動詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular.html');">一般動詞 過去・規則動詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-irregular.html');">一般動詞 過去・不規則動詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-list.html');">一般動詞 過去形・過去分詞表</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-have.html');">一般動詞 have</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-have2.html');">一般動詞 have その2</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-get.html');">一般動詞 get</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-go.html');">一般動詞 go</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-come.html');">一般動詞 come</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-take.html');">一般動詞 take</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-give.html');">一般動詞 give</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-tell.html');">一般動詞 tell</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-take.html');">一般動詞 take</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-like.html');">一般動詞 like</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-want.html');">一般動詞 want</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-keep.html');">一般動詞 keep</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-leave.html');">一般動詞 leave</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-put.html');">一般動詞 put</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-turn.html');">一般動詞 turn</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-make.html');">一般動詞 make</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-work.html');">一般動詞 work</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-use.html');">一般動詞 use</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-look.html');">一般動詞 look</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-think.html');">一般動詞 think</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-do.html');">一般動詞 do</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-know.html');">一般動詞 know</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-run.html');">一般動詞 run</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-be.html');">一般動詞 be</h1>
+
+    <div class="grammar-category">演習問題</div>
+    <div class="grammar-category">肯定文</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-affirmative.html');">be・一般動詞 現在形</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-affirmative-past.html');">be・一般動詞 過去形</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-affirmative-three.html');">be・一般動詞 三単現</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-be-become.html');">be動詞 なる</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-be-being.html');">be動詞 なること</h1>
+    <div class="grammar-category">疑問文</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-interrogative.html');">be・一般動詞 現在形</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-interrogative-past.html');">be・一般動詞 過去形</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-interrogative-three.html');">be・一般動詞 三単現</h1>
+    <div class="grammar-category">否定文</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-negative.html');">be・一般動詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-negative-past.html');">be・一般動詞 過去形</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-negative-three.html');">be・一般動詞 三単現</h1>
+
+    <div class="grammar-category">指示語</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-instruction-word-1.html');">指示語 this/that/these/those</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-instruction-word-2.html');">指示語 one/such/here/there</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-instruction-word-3.html');">指示語 some/other/another</h1>
+
+    <div class="grammar-category">前置詞</div>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-1.html');">前置詞 in/on/of/at</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-2.html');">前置詞 by/with/about/around</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-3.html');">前置詞 of/at</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-4.html');">前置詞 in/on</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-5.html');">前置詞 日付 in/on</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-6.html');">前置詞 手段・そばに by</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-7.html');">前置詞 to</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-8.html');">前置詞 above/over/under/below</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-exercises-9.html');">前置詞 behind/along/across</h1>
+
+    <div class="grammar-category">現在進行形</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-present-tense.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-present-tense-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-present-tense-negative.html');">否定文</h1>
+    <div class="grammar-category">過去進行形</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-past-tense.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-past-tense-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-past-tense-negative.html');">否定文</h1>
+
+    <div class="grammar-category">未来完了</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-complete.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-complete-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-complete-negative.html');">否定文</h1>
+
+    <div class="grammar-category">未来進行形</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-progressive.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-progressive-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-progressive-negative.html');">否定文</h1>
+
+    <div class="grammar-category">未来完了進行形</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-perfect-continuous.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-perfect-continuous-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-future-perfect-continuous-negative.html');">否定文</h1>
+
+    <div class="grammar-category">There構文</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-there.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-there-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-there-negative.html');">否定文</h1>
+
+    <div class="grammar-category">助動詞</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-can.html');">can 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-can-interrogative.html');">can 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-can-negative.html');">can 否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-will.html');">will 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-will-interrogative.html');">will 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-will-negative.html');">will 否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-could.html');">could 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-could-interrogative.html');">could 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-could-negative.html');">could 否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-would.html');">would 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-would-interrogative.html');">would 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-would-negative.html');">would 否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-must.html');">must肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-must-interrogative.html');">must 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-must-negative.html');">must 否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-maymight.html');">may/might/would 肯定文</h1>
+
+    <div class="grammar-category">助動詞表現</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-haveto.html');">have to 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-haveto-interrogative.html');">have to 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-haveto-negative.html');">have to 否定文</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-auxiliary-perfect-passive.html');">have + 過去分詞 肯定文</h1>
+
+    <div class="grammar-category">be going to</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-begoingto.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-begoingto-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-begoingto-negative.html');">否定文</h1>
+
+    <div class="grammar-category">形式主語</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-itis.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-itis-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-itis-negative.html');">否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-itis-that.html');">that節</h1>
+
+    <div class="grammar-category">関係代名詞・副詞</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-pronouns.html');">主格・be動詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-pronouns-normalverb.html');">主格・一般動詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-pronouns-objective.html');">目的格 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-pronouns-objective2.html');">目的格 その２ 肯定文</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-relative-pronoun-nominative-concatenation.html');">主格 be動詞 関係代名詞作成</h1>
+    <h1 class="title" onclick="onPageclick('eng-relative-pronoun-nominative-concatenation-normalverb.html');">主格 一般動詞 関係代名詞作成</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-relative-pronoun-nominative-concatenation-possessive.html');">所有格 関係代名詞作成</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-pronouns-join-be.html');">主格 be動詞 英文結合</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-pronouns-join-normal.html');">主格 一般動詞 英文結合</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-unrestricted.html');">非制限用法 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-unrestricted-interrogative.html');">非制限用法 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-unrestricted-negative.html');">非制限用法 否定文</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-adverb.html');">関係副詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-adverb-interrogative.html');">関係副詞 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-adverb-negative.html');">関係副詞 否定文</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-compound.html');">複合関係詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-compound-middle.html');">複合関係詞 肯定文 文中</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-preposition.html');">関係代名詞前置詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-preposition-interrogative.html');">関係代名詞前置詞 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-preposition-negative.html');">関係代名詞前置詞 否定文</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-etc.html');">その他の関係代名詞など</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-asthan.html');">as/than 関係代名詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-asthan-interrogative.html');">as/than 関係代名詞 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-relative-asthan-negative.html');">as/than 関係代名詞 否定文</h1>
+
+    <div class="grammar-category">不定詞</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-infinitive-substitute.html');">代不定詞 肯定文</h1>
+    <!-- <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-infinitive-substitute-interrogative.html');">代不定詞 疑問文</h1> -->
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-infinitive-substitute-negative.html');">代不定詞 否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-infinitive-base-causative.html');">原形不定詞 使役動詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-infinitive-perceptual.html');">原形不定詞 知覚動詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-infinitive-independent.html');">独立不定詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-infinitive-independent-interrogative.html');">独立不定詞 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-infinitive-independent-negative.html');">独立不定詞 否定文</h1>
+
+    <div class="grammar-category">動名詞</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-gerund-perfect-tense.html');">H 動名詞 完了形</h1>
+
+    <div class="grammar-category">比較 発展</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-compare-development.html');">比較 発展</h1>
+
+    <div class="grammar-category">受け身</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive.html');">受け身 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-interrogative.html');">受け身 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-negative.html');">受け身 否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-present-perfect.html');">受け身現在完了形 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-present-perfect-interrogative.html');">受け身現在完了形 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-present-perfect-negative.html');">受け身現在完了形 否定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-progressive-tense.html');">受け身進行形 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-progressive-tense-interrogative.html');">受け身進行形 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-progressive-tense-negative.html');">受け身進行形 否定文</h1>
+
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-auxiliary.html');">受け身助動詞 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-auxiliary-interrogative.html');">受け身助動詞 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-passive-auxiliary-negative.html');">受け身助動詞 否定文</h1>
+
+    <div class="grammar-category">接続詞</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-conjunction-sothat.html');">接続詞 so that</h1>
+
+    <div class="grammar-category">分詞構文</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-participial-construction.html');">肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-participial-construction-interrogative.html');">疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-participial-construction-negative.html');">否定文</h1>
+
+    <div class="grammar-category">その他発展</div>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-as-development.html');">as far as, as long as 発展</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-whether.html');">whether 肯定文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-whether-interrogative.html');">whether 疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-verb-regular-exercises-whether-negative.html');">whether 否定文</h1>
+
+    <div class="grammar-category">名詞 前置詞</div>
+    <h1 class="title" onclick="onPageclick('eng-noun-plural.html');">名詞 複数形</h1>
+    <h1 class="title" onclick="onPageclick('eng-noun-countable.html');">名詞 可算・不可算名詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-pronoun-first.html');">代名詞 一人称と二人称</h1>
+    <h1 class="title" onclick="onPageclick('eng-pronoun-third.html');">代名詞 三人称単数</h1>
+    <h1 class="title" onclick="onPageclick('eng-pronoun-third-multiple.html');">代名詞 三人称複数</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition.html');">前置詞</h1>
+    <div class="grammar-category">形容詞 副詞 接続詞</div>
+    <h1 class="title" onclick="onPageclick('eng-adjective.html');">形容詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-adverb.html');">副詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-conjunction.html');">接続詞</h1>
+    <div class="grammar-category">疑問詞 <br> be動詞: 疑問詞 be動詞 S ～?, 一般動詞: 疑問詞 do/does S 一般動詞～, 助動詞: 疑問詞 助動詞 S 一般動詞</div>
+    <h1 class="title" onclick="onPageclick('eng-interrogative-when.html');">疑問詞 When</h1>
+    <h1 class="title" onclick="onPageclick('eng-interrogative-where.html');">疑問詞 Where</h1>
+    <h1 class="title" onclick="onPageclick('eng-interrogative-what.html');">疑問詞 What</h1>
+    <h1 class="title" onclick="onPageclick('eng-interrogative-why.html');">疑問詞 Why</h1>
+    <h1 class="title" onclick="onPageclick('eng-interrogative-who.html');">疑問詞 Who</h1>
+    <h1 class="title" onclick="onPageclick('eng-interrogative-how.html');">疑問詞 How</h1>
+    <div class="grammar-category">日常表現</div>
+    <h1 class="title" onclick="onPageclick('eng-weather.html');">天候の表現</h1>
+    <h1 class="title" onclick="onPageclick('eng-time.html');">時刻の表現</h1>
+    <h1 class="title" onclick="onPageclick('eng-date.html');">日付の表現</h1>
+    <div class="grammar-category">数量表現</div>
+    <h1 class="title" onclick="onPageclick('eng-quantity-some.html');">数量表現 some etc</h1>
+    <h1 class="title" onclick="onPageclick('eng-quantity-much.html');">数量表現 much etc</h1>
+    <h1 class="title" onclick="onPageclick('eng-quantity-several.html');">数量表現 several etc</h1>
+    <h1 class="title" onclick="onPageclick('eng-quantity-most.html');">数量表現 most etc</h1>
+    <div class="grammar-category">助動詞 <br>肯: S 助動詞 一般動詞～, 疑: 助動詞 S 動詞～?, 否: S 助動詞 not 一般動詞～</div>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-can.html');">助動詞 Can</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-could.html');">助動詞 Could</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-will.html');">助動詞 Will</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-would.html');">助動詞 Would</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-must.html');">助動詞 Must</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-haveto.html');">助動詞表現 have to</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-should.html');">助動詞 Should</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-shall.html');">助動詞 Shall</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-oughtto.html');">H 助動詞表現 ought to</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-usedto.html');">H 助動詞表現 used to</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-dare.html');">H 助動詞 dare</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-need.html');">H 助動詞 need</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-may.html');">H 助動詞 May</h1>
+    <h1 class="title" onclick="onPageclick('eng-auxiliary-might.html');">H 助動詞 Might</h1>
+    <div class="grammar-category">進行形 <br>一般動詞ing</div>
+    <h1 class="title" onclick="onPageclick('eng-present-tense.html');">現在進行形</h1>
+    <h1 class="title" onclick="onPageclick('eng-past-progressive-tense.html');">過去進行形</h1>
+    <h1 class="title" onclick="onPageclick('eng-infinitive-going.html');">決まっている予定 going to</h1>
+    <div class="grammar-category">to不定詞 <br> to 動詞の原形</div>
+    <h1 class="title" onclick="onPageclick('eng-infinitive-noun.html');">to不定詞 名詞的用法</h1>
+    <h1 class="title" onclick="onPageclick('eng-infinitive-adjective.html');">to不定詞 形容詞的用法</h1>
+    <h1 class="title" onclick="onPageclick('eng-infinitive-adverb.html');">to不定詞 副詞詞的用法</h1>
+    <h1 class="title" onclick="onPageclick('eng-interrogative-to.html');">疑問詞 + to不定詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-infinitive-too.html');">to不定詞 too-to</h1>
+    <h1 class="title" onclick="onPageclick('eng-base-infinitive.html');">原形不定詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-base-infinitive_perception.html');">原形不定詞 知覚動詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-infinitive-substitute-infinitive.html');">H to不定詞 代不定詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-infinitive-independent-infinitive.html');">H to不定詞 独立不定詞</h1>
+    <div class="grammar-category">動名詞 <br>一般動詞ing</div>
+    <h1 class="title" onclick="onPageclick('eng-gerund.html');">動名詞 <br>一般動詞ing</h1>
+    <h1 class="title" onclick="onPageclick('eng-gerund-perfect-tense.html');">H 動名詞 完了形</h1>
+    <div class="grammar-category">接続詞</div>
+    <h1 class="title" onclick="onPageclick('eng-conjunction-because.html');">接続詞 When etc</h1>
+    <h1 class="title" onclick="onPageclick('eng-conjunction-that.html');">接続詞 that</h1>
+    <div class="grammar-category">命令</div>
+    <h1 class="title" onclick="onPageclick('eng-imperative-sentence.html');">命令文 <br>Sがない, 肯: 一般動詞～, 否: do/does not一般動詞～</h1>
+    <div class="grammar-category">比較 <br>比較: ～er/more ～ than, 最上: the ～est/most, 同格: as ～ as</div>
+    <h1 class="title" onclick="onPageclick('eng-compare-as.html');">同格 as～as</h1>
+    <h1 class="title" onclick="onPageclick('eng-compare-most.html');">最上級 most</h1>
+    <h1 class="title" onclick="onPageclick('eng-compare-than.html');">比較 than</h1>
+    <h1 class="title" onclick="onPageclick('eng-compare-development.html');">H 比較 発展</h1>
+    <div class="grammar-category">形式主語 <br>It is～</div>
+    <h1 class="title" onclick="onPageclick('eng-itis.html');">形式主語</h1>
+    <h1 class="title" onclick="onPageclick('eng-itis-that.html');">形式主語 that節</h1>
+    <div class="grammar-category">受け身 <br>肯: S be動詞 過去分詞～, 疑: be動詞 S 過去分詞動詞～?, 否: S be動詞 not 過去分詞～</div>
+    <h1 class="title" onclick="onPageclick('eng-passive.html');">受け身</h1>
+    <h1 class="title" onclick="onPageclick('eng-passive-present-perfect.html');">受け身 現在完了形</h1>
+    <h1 class="title" onclick="onPageclick('eng-passive-progressive.html');">受け身 進行形</h1>
+    <h1 class="title" onclick="onPageclick('eng-passive-modal.html');">受け身 助動詞</h1>
+    <div class="grammar-category">現在完了形 <br>肯: S have/has(助動詞) 過去分詞～, 疑: Have S 過去分詞～?, 否: S have/has not 過去分詞～</div>
+    <h1 class="title" onclick="onPageclick('eng-present-perfect-tense.html');">現在完了形 経験</h1>
+    <h1 class="title" onclick="onPageclick('eng-present-perfect-result.html');">現在完了形 完了・結果</h1>
+    <h1 class="title" onclick="onPageclick('eng-present-perfect-continuous.html');">現在完了形 継続</h1>
+    <h1 class="title" onclick="onPageclick('eng-present-perfect-progressive.html');">現在完了形進行形</h1>
+    <div class="grammar-category">過去完了形 <br>肯: S had(助動詞) 過去分詞～</div>
+    <h1 class="title" onclick="onPageclick('eng-past-perfect.html');">過去完了形</h1>
+    <h1 class="title" onclick="onPageclick('eng-past-perfect-continuous-tense.html');">過去完了進行形</h1>
+    <div class="grammar-category">分詞</div>
+    <h1 class="title" onclick="onPageclick('eng-participle-present.html');">現在分詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-participle-past.html');">過去分詞</h1>
+    <div class="grammar-category">疑問文</div>
+    <h1 class="title" onclick="onPageclick('eng-additional-interrogative.html');">付加疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-negative-interrogative.html');">否定疑問文</h1>
+    <h1 class="title" onclick="onPageclick('eng-indirect-interrogative.html');">間接疑問文</h1>
+    <div class="grammar-category">仮定法</div>
+    <h1 class="title" onclick="onPageclick('eng-subjunctive-mood.html');">仮定法</h1>
+    <h1 class="title" onclick="onPageclick('eng-subjunctive-mood-future.html');">仮定法 未来</h1>
+    <div class="grammar-category">関係詞</div>
+    <h1 class="title" onclick="onPageclick('eng-relative-pronoun-nominative.html');">関係代名詞 主格</h1>
+    <h1 class="title" onclick="onPageclick('eng-relative-pronoun-objective.html');">関係代名詞 目的格</h1>
+    <h1 class="title" onclick="onPageclick('eng-relative-pronoun-possessive.html');">関係代名詞 所有格</h1>
+    <h1 class="title" onclick="onPageclick('eng-relative-pronoun-non-restrictive.html');">H 関係代名詞 Which 非制限用法</h1>
+    <h1 class="title" onclick="onPageclick('eng-relative-adverb.html');">H 関係副詞</h1>
+    <h1 class="title" onclick="onPageclick('eng-whoever.html');">H 複合関係詞 Whoever</h1>
+    <h1 class="title" onclick="onPageclick('eng-whenever.html');">H 複合関係詞 Whenever</h1>
+    <h1 class="title" onclick="onPageclick('eng-whereever.html');">H 複合関係詞 Wherever</h1>
+    <h1 class="title" onclick="onPageclick('eng-whomever.html');">H 複合関係詞 Whomever</h1>
+    <h1 class="title" onclick="onPageclick('eng-whichever.html');">H 複合関係詞 Whichever</h1>
+    <h1 class="title" onclick="onPageclick('eng-whatever.html');">H 複合関係詞 Whatever</h1>
+    <h1 class="title" onclick="onPageclick('eng-however.html');">H 複合関係詞 However</h1>
+    <h1 class="title" onclick="onPageclick('eng-preposition-which.html');">H 関係代名詞 前置詞 + Which</h1>
+    <div class="grammar-category">構文 節</div>
+    <h1 class="title" onclick="onPageclick('eng-participial-construction.html');">H 分詞構文</h1>
+    <h1 class="title" onclick="onPageclick('eng-noun-clause.html');">H 名詞節</h1>
+    <h1 class="title" onclick="onPageclick('eng-inversion.html');">H 倒置</h1>
+    <h1 class="title" onclick="onPageclick('eng-highlighted-syntax.html');">H 強調構文</h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <script>
+    const checkbox = document.getElementById("showGrammarOnly");
+    const printBtn = document.getElementById("printBtn");
+    
+    function updateDisplay() {
+      const allElements = document.querySelectorAll("body *");
+    
+      if (checkbox.checked) {
+        allElements.forEach(el => {
+          // grammar-category と example-sentence 以外を非表示
+          if (
+            !el.classList.contains("grammar-category") &&
+            !el.classList.contains("example-sentence") &&
+            !el.classList.contains("showGrammarOnly") &&
+            el !== checkbox &&
+            el !== printBtn
+          ) {
+            el.style.display = "none";
+          } else {
+            el.style.display = "block";
+          }
+        });
+      } else {
+        // 全部を表示
+        allElements.forEach(el => {
+          el.style.display = "block";
+        });
+      }
+    }
+    
+    // チェック切り替え時に即反映
+    checkbox.addEventListener("change", updateDisplay);
+    
+    // 印刷ボタン押下時
+    printBtn.addEventListener("click", function () {
+      updateDisplay(); // 現在の状態に反映してから印刷
+      window.print();
+    });
+    </script>
+
+</body>
+</html>
