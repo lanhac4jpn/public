@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関係代名詞・主格 肯定文 be動詞 英文結合 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">関係代名詞・主格 肯定文 be動詞 英文結合 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["The man is Mr. Smith. He teaches English.", "The man who teaches English is Mr. Smith.", "英語を教えるその男性はスミス先生です。"],
+            ["The girl is my sister. She plays tennis.", "The girl who plays tennis is my sister.", "テニスをするその女の子は私の妹です。"],
+            ["The man is famous.  He wrote that book.", "The man who wrote that book is famous.", "その本を書いた男性は有名です。"],
+            ["The boy is Ken. He lives in Kyoto.", "The boy who lives in Kyoto is Ken.", "京都に住んでいるその少年はケンです。"],
+            ["The girl is Mary. She sings well.", "The girl who sings well is Mary.", "歌が上手なその女の子はメアリーです。"],
+            ["The boy is Tom. He likes soccer.", "The boy who likes soccer is Tom.", "サッカーが好きなその少年はトムです。"],
+            ["The man is kind. He helps his father.", "The man who helps his father is kind.", "お父さんを助けるその男性は親切です。"],
+            ["The woman is Ms. Brown. She teaches math.", "The woman who teaches math is Ms. Brown.", "数学を教えるその女性はブラウン先生です。"],
+            ["The boy is my friend. He speaks English.", "The boy who speaks English is my friend.", "英語を話すその少年は私の友達です。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

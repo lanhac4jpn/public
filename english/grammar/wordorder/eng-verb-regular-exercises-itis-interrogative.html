@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>形式主語 疑問文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">形式主語 疑問文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["to / is / study / it / English / important / ?", "Is it important to study English?", "英語を勉強することは大切ですか。"],
+            ["easy / read / it / to / this / book / is / ?", "Is it easy to read this book?", "この本を読むことは簡単ですか。"],
+            ["fun / it / play / soccer / to / is / ?", "Is it fun to play soccer?", "サッカーをすることは楽しいですか。"],
+            ["is / necessary / go / to / it / school / to / ?", "Is it necessary to go to school?", "学校に行くことは必要ですか。"],
+            ["speak / is / it / to / English / difficult / ?", "Is it difficult to speak English?", "英語を話すことは難しいですか。"],
+            ["dangerous / climb / the / it / is / to / mountain / ?", "Is it dangerous to climb the mountain?", "その山に登ることは危険ですか。"],
+            ["it / interesting / learn / is / to / history / ?", "Is it interesting to learn history?", "歴史を学ぶことは面白いですか。"],
+            ["it / to / enough / sleep / is / get / important / ?", "Is it important to get enough sleep?", "十分な睡眠をとることは大切ですか。"],
+            ["practice / day / every / necessary / it / is / to / ?", "Is it necessary to practice every day?", "毎日練習することは必要ですか。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

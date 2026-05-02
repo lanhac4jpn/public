@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関係代名詞前置詞 疑問文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">関係代名詞前置詞 疑問文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+            ["the / teacher / to / whom / spoke / you / kind / very / is / ?", "Is the teacher to whom you spoke very kind?", "あなたが話しかけた先生はとても親切ですか。"],
+            ["the / girl / with / whom / playing / is / Ken / tennis / Yumi / ?", "Is the girl with whom Ken is playing tennis Yumi?", "ケンがテニスをしているその女の子はユミですか。"],
+            ["the / man / for / whom / bought / present / you / a / your / uncle / was / ?", "Was the man for whom you bought a present your uncle?", "あなたがプレゼントを買ったその男性はあなたのおじでしたか。"],
+            ["the / chair / on / which / book / new / is / the / expensive / is / ?", "Is the chair on which the new book is expensive?", "新しい本が置いてあるその椅子は高価ですか。"],
+            ["the / boy / to / whom / wrote / letter / she / Tom / was / ?", "Was the boy to whom she wrote a letter Tom?", "彼女が手紙を書いたその少年はトムでしたか。"],
+            ["the / city / in / which / stayed / we / beautiful / was / ?", "Was the city in which we stayed beautiful?", "私たちが滞在したその町は美しかったですか。"],
+            ["the / woman / by / whom / painted / was / picture / this / artist / famous / a / ?", "Was the woman by whom this picture was painted a famous artist?", "この絵を描いたその女性は有名な芸術家でしたか。"],
+            ["the / box / from / which / took / out / toy / he / heavy / is / ?", "Is the box from which he took out the toy heavy?", "彼がおもちゃを取り出したその箱は重いですか。"],
+            ["the / time / during / which / festival / the / held / is / exciting / was / ?", "Was the time during which the festival is held exciting?", "その祭りが行われる時期はわくわくしましたか。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

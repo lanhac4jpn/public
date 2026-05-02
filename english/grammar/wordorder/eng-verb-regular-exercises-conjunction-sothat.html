@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>接続詞 so that 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">接続詞 so that 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["was / tired / he / so / that / sleep / to / went / he / early / .", "He was so tired that he went to sleep early.", "彼はとても疲れていたので早く寝ました。"],
+            ["such / is / she / kind / that / everyone / her / likes / .", "She is such a kind girl that everyone likes her.", "彼女はとても親切な女の子なので、みんなが彼女を好きです。"],
+            ["it / rained / heavily / so / that / we / could / not / go / out / .", "It rained heavily so that we could not go out.", "大雨が降ったので私たちは外出できませんでした。"],
+            ["the / movie / was / interesting / so / that / forgot / time / I / the / .", "The movie was so interesting that I forgot the time.", "その映画はとても面白かったので時間を忘れました。"],
+            ["was / noise / such / there / that / sleep / could / not / I / .", "There was such a noise that I could not sleep.", "とても大きな音がしたので私は眠れませんでした。"],
+            ["speak / slowly / he / so / that / everyone / understand / could / .", "He spoke slowly so that everyone could understand.", "彼はみんなが理解できるようにゆっくり話しました。"],
+            ["was / hot / it / so / that / we / swimming / went / .", "It was so hot that we went swimming.", "とても暑かったので私たちは泳ぎに行きました。"],
+            ["such / a / he / is / great / player / that / respect / all / him / .", "He is such a great player that all respect him.", "彼はとても素晴らしい選手なのでみんなが彼を尊敬します。"],
+            ["studied / hard / I / so / that / exam / pass / could / I / the / .", "I studied hard so that I could pass the exam.", "私は試験に合格できるように一生懸命勉強しました。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

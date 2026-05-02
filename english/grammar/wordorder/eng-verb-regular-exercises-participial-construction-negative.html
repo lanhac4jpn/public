@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分詞構文 否定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">分詞構文 否定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["not / knowing / what / to / do / , / he / asked / teacher / his / .", "Not knowing what to do, he asked his teacher.", "何をすべきか分からなかったので、彼は先生に尋ねました。"],
+            ["not / having / finished / homework / his / , / he / could / go / not / out / .", "Not having finished his homework, he could not go out.", "宿題を終えていなかったので、彼は外出できませんでした。"],
+            ["not / invited / to / party / the / , / she / stayed / home / at / .", "Not invited to the party, she stayed at home.", "パーティーに招かれなかったので、彼女は家にいました。"],
+            ["not / being / tired / , / went / she / bed / not / early / .", "Not being tired, she did not go to bed early.", "疲れていなかったので、彼女は早く寝ませんでした。"],
+            ["not / built / strongly / , / the / house / damaged / was / easily / .", "Not built strongly, the house was easily damaged.", "しっかり建てられていなかったので、その家は簡単に壊れました。"],
+            ["not / having / studied / enough / , / pass / he / the / exam / could / not / .", "Not having studied enough, he could not pass the exam.", "十分に勉強していなかったので、彼は試験に合格できませんでした。"],
+            ["not / seen / for / years / many / , / old / friend / my / me / recognized / hardly / .", "Not seen for many years, my old friend hardly recognized me.", "何年も会っていなかったので、古い友達は私をほとんど認識できませんでした。"],
+            ["not / being / careful / , / he / mistake / made / a / .", "Not being careful, he made a mistake.", "注意していなかったので、彼は間違いをしました。"],
+            ["not / prepared / well / , / speech / the / interesting / was / not / .", "Not prepared well, the speech was not interesting.", "よく準備されていなかったので、そのスピーチは面白くありませんでした。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

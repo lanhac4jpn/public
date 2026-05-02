@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関係副詞 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">関係副詞 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["was / I / the / when / sick / time / is / stayed / this / home / .", "This is the time when I was sick and stayed home.", "これが私が病気で家にいた時です。"],
+            ["the / is / we / met / where / park / the / .", "This is the park where we met.", "ここが私たちが会った公園です。"],
+            ["the / I / why / reason / is / study / hard / this / .", "This is the reason why I study hard.", "これが私が一生懸命勉強する理由です。"],
+            ["day / met / we / that / the / was / when / Tom / .", "That was the day when we met Tom.", "それは私たちがトムに会った日でした。"],
+            ["restaurant / had / the / lunch / good / is / the / where / we / .", "The restaurant where we had lunch is good.", "私たちが昼食を食べたレストランは良いです。"],
+            ["she / was / surprised / reason / the / is / the / why / late / he / .", "The reason why she was surprised is that he was late.", "彼女が驚いた理由は彼が遅れたからです。"],
+            ["never / forget / I / when / the / won / game / I / the / day / will / .", "I will never forget the day when I won the game.", "私が試合に勝った日を決して忘れません。"],
+            ["was / stayed / hotel / the / the / we / where / very / good / .", "The hotel where we stayed was very good.", "私たちが泊まったホテルはとても良かったです。"],
+            ["reason / I / this / am / is / happy / the / why / .", "This is the reason why I am happy.", "これが私が幸せな理由です。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

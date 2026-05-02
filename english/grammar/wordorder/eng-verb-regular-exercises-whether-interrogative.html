@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whether 疑問文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">whether 疑問文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["know / do / you / whether / true / is / story / the / ?", "Do you know whether the story is true?", "あなたはその話が本当かどうか知っていますか。"],
+            ["tell / can / me / you / whether / busy / is / he / ?", "Can you tell me whether he is busy?", "彼が忙しいかどうか教えてくれますか。"],
+            ["ask / she / whether / come / will / he / did / ?", "Did she ask whether he will come?", "彼が来るかどうか、彼女は尋ねましたか。"],
+            ["sure / are / you / whether / true / is / this / ?", "Are you sure whether this is true?", "これは本当かどうか確かですか。"],
+            ["decide / you / whether / go / will / tomorrow / ?", "Will you decide whether to go tomorrow?", "あなたは明日行くかどうか決めますか。"],
+            ["whether / ready / we / the / teacher / asked / were / did / ?", "Did the teacher ask whether we were ready?", "先生は私たちが準備できているかどうか尋ねましたか。"],
+            ["remember / he / whether / locked / the / door / did / ?", "Did he remember whether he locked the door?", "彼はドアに鍵をかけたかどうか覚えていましたか。"],
+            ["whether / club / she / join / will / the / decide / to / ?", "Will she decide whether to join the club?", "彼女はクラブに入るかどうか決めますか。"],
+            ["wonder / they / whether / true / was / news / the / did / ?", "Did they wonder whether the news was true?", "彼らはそのニュースが本当かどうか不思議に思いましたか。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

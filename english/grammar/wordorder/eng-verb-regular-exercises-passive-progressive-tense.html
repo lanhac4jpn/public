@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>受け身進行形 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">受け身進行形 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["the / car / is / being / washed / now / .", "The car is being washed now.", "その車はいま洗われているところです。"],
+            ["is / homework / being / done / my / at / moment / the / .", "My homework is being done at the moment.", "私の宿題はいまやっているところです。"],
+            ["the / is / being / built / bridge / new / .", "The new bridge is being built.", "新しい橋はいま建設されているところです。"],
+            ["room / the / being / cleaned / is / right / now / .", "The room is being cleaned right now.", "その部屋はいま掃除されているところです。"],
+            ["letters / are / written / being / the / by / students / .", "The letters are being written by the students.", "その手紙はいま生徒たちによって書かれているところです。"],
+            ["is / song / the / sung / being / by / her / .", "The song is being sung by her.", "その歌はいま彼女によって歌われているところです。"],
+            ["house / painted / is / being / our / .", "Our house is being painted.", "私たちの家はいま塗装されているところです。"],
+            ["is / English / spoken / being / in / class / this / .", "English is being spoken in this class.", "英語はいまこのクラスで話されています。"],
+            ["the / dinner / being / is / prepared / kitchen / in / the / .", "The dinner is being prepared in the kitchen.", "夕食はいま台所で準備されています。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>複合関係詞 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">複合関係詞 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["whoever / is / welcome / wants / come / to / .", "Whoever wants to come is welcome.", "来たい人は誰でも歓迎します。"],
+            ["whichever / you / choose / book / good / is / .", "Whichever book you choose is good.", "どの本を選んでも良いです。"],
+            ["whatever / he / says / true / is / .", "Whatever he says is true.", "彼が言うことは何でも本当です。"],
+            ["whenever / call / me / you / happy / am / I / .", "Whenever you call me, I am happy.", "あなたがいつ電話しても、私はうれしいです。"],
+            ["wherever / she / goes / follows / dog / her / .", "Wherever she goes, her dog follows.", "彼女がどこへ行っても、犬がついて行きます。"],
+            ["whoever / the / fastest / wins / runs / .", "Whoever runs the fastest wins.", "一番速く走る人が勝ちます。"],
+            ["whichever / you / choose / way / fine / is / .", "Whichever way you choose is fine.", "どちらの方法を選んでも大丈夫です。"],
+            ["whatever / happens / matter / we / support / will / you / .", "Whatever happens, we will support you.", "何が起こっても、私たちはあなたを支えます。"],
+            ["whenever / visit / are / you / to / happy / we / .", "Whenever you visit, we are happy.", "あなたが訪ねてくれるといつでも、私たちはうれしいです。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

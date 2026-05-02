@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>指示語 this/that/these/those</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">指示語 this/that/these/those</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["my / is / pen / this / .", "This is my pen.", "これは私のペンです。"],
+            ["that / your / bag / is / .", "That is your bag.", "あれはあなたのかばんです。"],
+            ["these / new / are / my / shoes / .", "These are my new shoes.", "これらは私の新しい靴です。"],
+            ["those / are / apples / red / .", "Those are red apples.", "あれらは赤いりんごです。"],
+            ["this / is / cake / delicious / .", "This cake is delicious.", "このケーキはおいしいです。"],
+            ["that / mountain / is / high / very / .", "That mountain is very high.", "あの山はとても高いです。"],
+            ["these / flowers / are / beautiful / .", "These flowers are beautiful.", "これらの花はきれいです。"],
+            ["those / students / are / from / Canada / .", "Those students are from Canada.", "あの学生たちはカナダ出身です。"],
+            ["this / is / my / favorite / book / .", "This is my favorite book.", "これは私の一番好きな本です。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

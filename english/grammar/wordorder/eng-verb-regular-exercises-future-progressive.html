@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未来進行形 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">未来進行形 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["at / tomorrow / library / will / I / be / studying / the / .", "I will be studying at the library tomorrow.", "私は明日図書館で勉強しているでしょう。"],
+            ["be / she / will / dinner / at / cooking / 7 / .", "She will be cooking dinner at 7.", "彼女は7時に夕食を作っているでしょう。"],
+            ["meeting / attending / they / tomorrow / be / the / will / .", "They will be attending the meeting tomorrow.", "彼らは明日会議に出席しているでしょう。"],
+            ["be / he / playing / soccer / park / the / in / will / .", "He will be playing soccer in the park.", "彼は公園でサッカーをしているでしょう。"],
+            ["will / be / traveling / we / abroad / next / year / .", "We will be traveling abroad next year.", "私たちは来年海外を旅行しているでしょう。"],
+            ["movie / watching / will / be / I / the / tonight / .", "I will be watching the movie tonight.", "私は今夜その映画を観ているでしょう。"],
+            ["your / using / be / computer / will / you / ? / not / .", "You will be using your computer.", "あなたは自分のパソコンを使っているでしょう。"],
+            ["garden / in / the / will / be / working / he / .", "He will be working in the garden.", "彼は庭で働いているでしょう。"],
+            ["school / at / be / children / the / will / studying / .", "The children will be studying at school.", "子どもたちは学校で勉強しているでしょう。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

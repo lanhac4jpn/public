@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>受け身助動詞 疑問文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">受け身助動詞 疑問文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["this / song / be / can / by / sung / her / ?", "Can this song be sung by her?", "この歌は彼女によって歌うことができますか。"],
+            ["the / homework / done / be / must / today / ?", "Must the homework be done today?", "その宿題は今日やられなければなりませんか。"],
+            ["the / letter / tomorrow / be / will / sent / ?", "Will the letter be sent tomorrow?", "その手紙は明日送られますか。"],
+            ["this / book / read / should / by / students / be / ?", "Should this book be read by students?", "この本は生徒によって読むべきですか。"],
+            ["English / spoken / anywhere / can / be / ?", "Can English be spoken anywhere?", "英語はどこでも話せますか。"],
+            ["school / built / new / be / will / soon / a / ?", "Will a new school be built soon?", "新しい学校はまもなく建てられますか。"],
+            ["this / rule / followed / be / must / ?", "Must this rule be followed?", "この規則は守られなければなりませんか。"],
+            ["the / work / be / finished / should / by / evening / this / ?", "Should the work be finished by this evening?", "その仕事は今晩までに終えられるべきですか。"],
+            ["his / bike / be / can / used / by / anyone / ?", "Can his bike be used by anyone?", "彼の自転車は誰でも使えますか。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

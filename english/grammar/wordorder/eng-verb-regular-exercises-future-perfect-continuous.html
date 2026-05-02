@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未来完了進行形 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">未来完了進行形 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["for / will / hours / three / I / have / studying / been / .", "I will have been studying for three hours.", "私は3時間勉強していることになるでしょう。"],
+            ["she / working / have / been / all / will / day / .", "She will have been working all day.", "彼女は一日中働いていることになるでしょう。"],
+            ["they / playing / have / will / been / soccer / for / hours / two / .", "They will have been playing soccer for two hours.", "彼らは2時間サッカーをしていることになるでしょう。"],
+            ["for / we / waiting / will / have / been / minutes / thirty / .", "We will have been waiting for thirty minutes.", "私たちは30分待っていることになるでしょう。"],
+            ["he / living / have / been / will / city / in / this / years / five / for / .", "He will have been living in this city for five years.", "彼はこの街に5年間住んでいることになるでしょう。"],
+            ["studying / will / English / been / I / for / have / two / hours / .", "I will have been studying English for two hours.", "私は2時間英語を勉強していることになるでしょう。"],
+            ["teaching / ten / for / she / have / years / been / will / .", "She will have been teaching for ten years.", "彼女は10年間教えていることになるでしょう。"],
+            ["been / will / traveling / months / they / have / three / for / .", "They will have been traveling for three months.", "彼らは3か月間旅行していることになるでしょう。"],
+            ["be / we / talking / for / will / hours / have / been / two / .", "We will have been talking for two hours.", "私たちは2時間話していることになるでしょう。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

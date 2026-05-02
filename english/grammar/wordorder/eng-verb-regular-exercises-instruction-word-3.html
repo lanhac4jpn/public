@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>指示語 some/other/another</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">指示語 some/other/another</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["some / have / apples / I / .", "I have some apples.", "私はいくつかのりんごを持っています。"],
+            ["there / some / are / on / the / books / table / .", "There are some books on the table.", "テーブルの上にいくつかの本があります。"],
+            ["need / some / we / water / .", "We need some water.", "私たちは水が少し必要です。"],
+            ["buy / another / want / I / pen / .", "I want to buy another pen.", "私はもう1本ペンを買いたいです。"],
+            ["another / cup / tea / of / have / please / .", "Please have another cup of tea.", "どうぞもう1杯お茶をお飲みください。"],
+            ["take / other / the / road / .", "Take the other road.", "もう一方の道を行きなさい。"],
+            ["some / need / I / help / .", "I need some help.", "私は少し助けが必要です。"],
+            ["another / is / store / there / near / .", "There is another store near.", "近くにもう1つの店があります。"],
+            ["other / students / kind / are / very / the / .", "The other students are very kind.", "他の生徒たちはとても親切です。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

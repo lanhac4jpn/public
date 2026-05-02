@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分詞構文 疑問文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">分詞構文 疑問文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["down / she / the / street / walking / , / happy / was / she / ?", "Walking down the street, was she happy?", "通りを歩きながら、彼女は幸せでしたか。"],
+            ["homework / finished / having / , / did / out / he / go / ?", "Having finished his homework, did he go out?", "宿題を終えて、彼は外出しましたか。"],
+            ["the / teacher / , / asked / he / answer / the / did / question / ?", "Asked the question, did he answer the teacher?", "質問されて、彼は先生に答えましたか。"],
+            ["tree / the / under / reading / a / book / , / sitting / was / he / ?", "Sitting under the tree, reading a book, was he?", "木の下に座って本を読んで、彼はそうしていましたか。"],
+            ["tired / being / , / to / she / early / bed / did / go / ?", "Being tired, did she go to bed early?", "疲れていたので、彼女は早く寝ましたか。"],
+            ["weather / fine / the / being / , / go / did / we / out / ?", "The weather being fine, did we go out?", "天気が良かったので、私たちは出かけましたか。"],
+            ["built / house / in / 1990 / , / strong / still / is / it / ?", "Built in 1990, is the house still strong?", "1990年に建てられたその家は、今でも丈夫ですか。"],
+            ["the / road / crossing / , / old / see / friend / did / an / he / ?", "Crossing the road, did he see an old friend?", "道を渡っていて、彼は古い友達に会いましたか。"],
+            ["spoken / in / English / , / understood / easily / was / she / ?", "Spoken in English, was she easily understood?", "英語で話して、彼女は簡単に理解されましたか。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

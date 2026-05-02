@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関係代名詞その他 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">関係代名詞その他詞 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["what / said / true / he / is / .", "What he said is true.", "彼が言ったことは本当です。"],
+            ["I / is / what / need / you / .", "I need what you have.", "私はあなたが持っているものが必要です。"],
+            ["whoever / first / comes / welcome / is / .", "Whoever comes first is welcome.", "最初に来た人は誰でも歓迎です。"],
+            ["will / whichever / want / choose / you / book / .", "You may choose whichever book you want.", "欲しい本ならどれでも選んでよいです。"],
+            ["whatever / she / surprised / says / me / .", "Whatever she says surprises me.", "彼女が言うことは何でも私を驚かせます。"],
+            ["whoever / the / wins / race / prize / gets / the / .", "Whoever wins the race gets the prize.", "レースに勝った人が賞をもらいます。"],
+            ["eat / want / can / whatever / you / .", "You can eat whatever you want.", "欲しいものは何でも食べていいです。"],
+            ["wherever / goes / dog / she / follows / her / .", "Wherever she goes, her dog follows her.", "彼女が行くところにはどこでも犬がついていきます。"],
+            ["whoever / is / help / needs / should / .", "You should help whoever needs help.", "助けを必要としている人は誰でも助けるべきです。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

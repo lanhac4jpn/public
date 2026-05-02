@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分詞構文 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">分詞構文 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["the / street / walked / down / she / singing / .", "She walked down the street, singing.", "彼女は歌いながら通りを歩きました。"],
+            ["his / finished / homework / , / went / he / out / .", "Having finished his homework, he went out.", "宿題を終えて、彼は外出しました。"],
+            ["the / spoken / question / , / answered / he / teacher / .", "Asked the question, he answered the teacher.", "質問されて、彼は先生に答えました。"],
+            ["a / sat / book / the / reading / he / under / tree / the / .", "He sat under the tree, reading a book.", "彼は木の下に座って本を読んでいました。"],
+            ["being / tired / , / to / went / bed / early / she / .", "Being tired, she went to bed early.", "疲れていたので、彼女は早く寝ました。"],
+            ["weather / the / being / fine / , / went / we / out / .", "The weather being fine, we went out.", "天気が良かったので、私たちは出かけました。"],
+            ["the / built / house / in / 1990 / , / still / is / strong / .", "Built in 1990, the house is still strong.", "1990年に建てられたその家は、今でも丈夫です。"],
+            ["the / road / crossing / , / saw / he / an / friend / old / .", "Crossing the road, he saw an old friend.", "道を渡っていて、彼は古い友達に会いました。"],
+            ["spoken / English / , / understood / easily / was / she / .", "Spoken in English, she was easily understood.", "英語で話したので、彼女は簡単に理解されました。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

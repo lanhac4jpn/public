@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>複合関係詞 文中 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">複合関係詞 文中 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["I / will / accept / whoever / comes / first / .", "I will accept whoever comes first.", "最初に来る人は誰でも受け入れます。"],
+            ["she / likes / whichever / book / you / choose / .", "She likes whichever book you choose.", "彼女はあなたが選んだ本ならどれでも好きです。"],
+            ["we / support / you / in / whatever / do / you / .", "We will support you in whatever you do.", "あなたがすることは何でも私たちは支えます。"],
+            ["whoever / wins / the / race / get / will / prize / the / .", "Whoever wins the race will get the prize.", "レースに勝つ人が賞をもらいます。"],
+            ["whichever / way / take / you / safe / is / .", "Whichever way you take is safe.", "どの道を通っても安全です。"],
+            ["believe / cannot / I / whatever / says / he / .", "I cannot believe whatever he says.", "彼が言うことは何でも信じられません。"],
+            ["you / may / come / whenever / want / you / .", "You may come whenever you want.", "あなたは来たいときにいつでも来てもいいです。"],
+            ["she / goes / will / follow / him / wherever / he / .", "She will follow him wherever he goes.", "彼が行くところならどこへでも彼女はついて行きます。"],
+            ["help / whoever / you / need / should / .", "You should help whoever needs you.", "あなたは助けを必要とする人を誰でも助けるべきです。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

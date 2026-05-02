@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不定詞 代不定詞 疑問文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">不定詞 代不定詞 疑問文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["I / decided / not / to / join / the / club / and / he / decided / not / to / .", "I decided not to join the club, and he decided not to.", "私はクラブに入らないことに決め、彼もそうしました。"],
+            ["late / she / tried / not / to / be / and / I / tried / not / to / .", "She tried not to be late, and I tried not to.", "彼女は遅れないようにし、私もそうしました。"],
+            ["eat / vegetables / he / not / like / to / and / does / his / brother / like / not / to / .", "He does not like to eat vegetables, and his brother does not like to.", "彼は野菜を食べるのが好きではなく、彼の弟もそうではありません。"],
+            ["we / promised / not / to / make / noise / and / they / promised / not / to / .", "We promised not to make noise, and they promised not to.", "私たちは騒がないと約束し、彼らもそうしました。"],
+            ["not / to / buy / that / she / decided / bag / and / I / decided / not / to / .", "She decided not to buy that bag, and I decided not to.", "彼女はそのかばんを買わないことに決め、私もそうしました。"],
+            ["Ken / tried / not / to / laugh / and / Tom / tried / not / to / .", "Ken tried not to laugh, and Tom tried not to.", "ケンは笑わないようにし、トムもそうしました。"],
+            ["play / video / games / too / much / I / not / to / try / and / my / friend / tries / not / to / .", "I try not to play video games too much, and my friend tries not to.", "私はゲームをやりすぎないようにし、友達もそうしています。"],
+            ["she / not / to / eat / decided / sweets / and / I / decided / not / to / .", "She decided not to eat sweets, and I decided not to.", "彼女はお菓子を食べないことに決め、私もそうしました。"],
+            ["arrive / school / at / late / we / not / to / promised / and / they / promised / not / to / .", "We promised not to arrive at school late, and they promised not to.", "私たちは学校に遅れないと約束し、彼らもそうしました。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

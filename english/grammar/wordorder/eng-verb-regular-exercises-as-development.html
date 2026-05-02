@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as far as, as long as 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <close-btn></close-btn>
+    <h1 class="title">as far as, as long as 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p id="instruction-text">以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["as / know / I / far / as / , / is / she / kind / .", "As far as I know, she is kind.", "私が知る限り、彼女は親切です。"],
+            ["as / study / hard / long / you / as / , / will / you / pass / .", "As long as you study hard, you will pass.", "一生懸命勉強する限り、あなたは合格します。"],
+            ["as / possible / soon / I / as / call / you / will / .", "I will call you as soon as possible.", "できるだけ早くあなたに電話します。"],
+            ["as / well / she / dances / as / sings / .", "She dances as well as she sings.", "彼女は歌うのと同じくらい上手に踊ります。"],
+            ["as / far / I / is / can / as / see / , / safe / it / .", "As far as I can see, it is safe.", "私が見る限り、それは安全です。"],
+            ["as / keep / you / promise / long / as / your / , / trust / you / I / will / .", "As long as you keep your promise, I will trust you.", "あなたが約束を守る限り、私はあなたを信じます。"],
+            ["arrive / as / as / she / soon / possible / .", "She will arrive as soon as possible.", "彼女はできるだけ早く到着します。"],
+            ["well / he / plays / the / piano / as / as / his / father / .", "He plays the piano as well as his father.", "彼は父と同じくらい上手にピアノを弾きます。"],
+            ["as / know / I / far / as / , / is / true / story / this / .", "As far as I know, this story is true.", "私が知る限り、この話は本当です。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

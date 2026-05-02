@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>強調構文</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <close-btn></close-btn>
+        <h1 class="title">強調構文</h1>
+
+        <!-- 文法と構文の説明 -->
+        <section>
+            <h2>文法と構文の説明</h2>
+            <p><strong>強調構文</strong> は、文中の特定の部分を際立たせるために使用される構文です。</p>
+            <ul>
+                <li><b>It was ～ that:</b> 特定の部分を強調する例: It was Tom that broke the vase. （花瓶を割ったのはトムだった。）</li>
+                <li><b>What ～ is:</b> 強調された内容を表す例: What I need is a break. （私が必要なのは休息だ。）</li>
+                <li><b>It was not until ～ that:</b> 強調した時点を表す例: It was not until yesterday that I knew the truth. （昨日になって初めて真実を知った。）</li>
+                <li><b>All ～:</b> 全てを強調する例: All I want is peace. （私が欲しいのは平和だけだ。）</li>
+                <li><b>The reason why ～:</b> 理由を強調する例: The reason why he left is unknown. （彼が去った理由は不明だ。）</li>
+            </ul>
+        </section>
+
+        <!-- 問題 -->
+        <section>
+            <h2>問題</h2>
+            <p>以下の単語を並び替えて正しい文を作成しましょう。（和訳を参考にしてください）</p>
+            <img src="./eng-emphatic-structure.png"/>
+
+            <!-- 問題1 -->
+            <div class="mb-3">
+                <p><strong>問題1:</strong> (was / it / broke / Tom / the vase / that) - 花瓶を割ったのはトムだった。</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">解答と解説</button>
+                <div class="collapse" id="answer1">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> It was Tom that broke the vase.</p>
+                        <p><strong>解説:</strong> It was ～ that の形でトムを強調しています。</p>
+                        <ul>
+                            <li>It: それ（代名詞）</li>
+                            <li>was: ～だった（動詞）</li>
+                            <li>Tom: トム（固有名詞）</li>
+                            <li>that: ～ということ（接続詞）</li>
+                            <li>broke: 割った（動詞）</li>
+                            <li>the vase: その花瓶（名詞句）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問題2 -->
+            <div class="mb-3">
+                <p><strong>問題2:</strong> (is / need / I / what / a break) - 私が必要なのは休息だ。</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">解答と解説</button>
+                <div class="collapse" id="answer2">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> What I need is a break.</p>
+                        <p><strong>解説:</strong> What ～ is の構文で「必要なもの」を強調しています。</p>
+                        <ul>
+                            <li>What: ～なもの（関係代名詞）</li>
+                            <li>I: 私（主語）</li>
+                            <li>need: 必要とする（動詞）</li>
+                            <li>is: ～である（動詞）</li>
+                            <li>a break: 一休み（名詞句）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問題3 -->
+            <div class="mb-3">
+                <p><strong>問題3:</strong> (was / not / it / until / knew / I / yesterday / that / the truth) - 昨日になって初めて真実を知った。</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer3">解答と解説</button>
+                <div class="collapse" id="answer3">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> It was not until yesterday that I knew the truth.</p>
+                        <p><strong>解説:</strong> It was not until ～ that 構文で強調しています。</p>
+                        <ul>
+                            <li>It: それ（代名詞）</li>
+                            <li>was: ～だった（動詞）</li>
+                            <li>not until: ～になって初めて（副詞句）</li>
+                            <li>yesterday: 昨日（副詞）</li>
+                            <li>that: ～ということ（接続詞）</li>
+                            <li>I: 私（主語）</li>
+                            <li>knew: 知った（動詞）</li>
+                            <li>the truth: 真実（名詞句）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問題4 -->
+            <div class="mb-3">
+                <p><strong>問題4:</strong> (all / is / peace / want / I) - 私が欲しいのは平和だけだ。</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer4">解答と解説</button>
+                <div class="collapse" id="answer4">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> All I want is peace.</p>
+                        <p><strong>解説:</strong> All ～ の構文で「平和だけ」を強調しています。</p>
+                        <ul>
+                            <li>All: 全て（代名詞）</li>
+                            <li>I: 私（主語）</li>
+                            <li>want: 欲しい（動詞）</li>
+                            <li>is: ～である（動詞）</li>
+                            <li>peace: 平和（名詞）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 問題5 -->
+            <div class="mb-3">
+                <p><strong>問題5:</strong> (is / why / he / the reason / left / unknown) - 彼が去った理由は不明だ。</p>
+                <delete-btn></delete-btn>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer5">解答と解説</button>
+                <div class="collapse" id="answer5">
+                    <div class="card card-body">
+                        <p><strong>解答:</strong> The reason why he left is unknown.</p>
+                        <p><strong>解説:</strong> The reason why ～ の構文で理由を強調しています。</p>
+                        <ul>
+                            <li>The reason: 理由（名詞句）</li>
+                            <li>why: なぜ（関係副詞）</li>
+                            <li>he: 彼（主語）</li>
+                            <li>left: 去った（動詞）</li>
+                            <li>is: ～である（動詞）</li>
+                            <li>unknown: 不明な（形容詞）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <close-btn></close-btn>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/AnswerAreaIns.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

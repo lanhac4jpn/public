@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関係代名詞非制限用法 否定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">関係代名詞非制限用法 否定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["my / brother / , / who / lives / in / Osaka / , / not / is / a / doctor / .", "My brother, who lives in Osaka, is not a doctor.", "大阪に住んでいる私の兄は医者ではありません。"],
+            ["this / book / , / which / was / written / by / my / teacher / , / interesting / not / is / .", "This book, which was written by my teacher, is not interesting.", "私の先生が書いたこの本は面白くありません。"],
+            ["Mr / Smith / , / who / teaches / us / math / , / kind / is / not / .", "Mr. Smith, who teaches us math, is not kind.", "私たちに数学を教えているスミス先生は親切ではありません。"],
+            ["Kyoto / , / which / is / famous / for / its / temples / , / popular / is / not / with / tourists / .", "Kyoto, which is famous for its temples, is not popular with tourists.", "寺で有名な京都は観光客に人気がありません。"],
+            ["my / friend / , / whose / father / is / a / pilot / , / to / be / a / pilot / want / does / not / .", "My friend, whose father is a pilot, does not want to be a pilot.", "父がパイロットである私の友達は、パイロットになりたいと思っていません。"],
+            ["Paris / , / where / I / visited / last / year / , / beautiful / is / not / .", "Paris, where I visited last year, is not beautiful.", "私が去年訪れたパリは美しくありません。"],
+            ["the / car / , / which / was / very / expensive / , / his / is / not / .", "The car, which was very expensive, is not his.", "とても高価だったその車は彼のものではありません。"],
+            ["my / sister / , / who / is / good / at / piano / , / a / prize / win / did / not / .", "My sister, who is good at piano, did not win a prize.", "ピアノが得意な私の姉は賞を取りませんでした。"],
+            ["Mount / Fuji / , / which / is / the / highest / mountain / in / Japan / , / beautiful / is / not / .", "Mount Fuji, which is the highest mountain in Japan, is not beautiful.", "日本で一番高い山である富士山は美しくありません。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>
