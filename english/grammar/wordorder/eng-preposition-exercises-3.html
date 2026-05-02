@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前置詞 of/at</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">前置詞 of/at</h1>
+
+    <!-- 単語の説明 -->
+    <section class="mt-4">
+        <h2>単語説明</h2>
+        <ul>
+            <li><strong>of:</strong>〜の（所有・部分・材料）</li>
+            <li><strong>at:</strong>〜で（場所・時間・点）</li>
+        </ul>
+    </section>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["color / of / is / the / blue / sky / .", "The color of the sky is blue.", "空の色は青いです。"],
+            ["cup / tea / a / of / want / I / .", "I want a cup of tea.", "私は紅茶を一杯ほしいです。"],
+            ["door / someone / is / the / at / .", "Someone is at the door.", "誰かがドアのところにいます。"],
+            ["at / park / the / children / are / .", "The children are at the park.", "子どもたちは公園にいます。"],
+            ["desk / of / made / wood / is / the / .", "The desk is made of wood.", "その机は木でできています。"],
+            ["meet / I / will / him / at / station / the / .", "I will meet him at the station.", "私は駅で彼に会います。"],
+            ["of / the / top / at / mountain / view / is / great / the / .", "The view at the top of the mountain is great.", "山の頂上からの景色はすばらしいです。"],
+            ["of / a / glass / water / is / on / the / table / .", "A glass of water is on the table.", "コップ一杯の水がテーブルの上にあります。"],
+            ["starts / at / the / 8 / concert / .", "The concert starts at 8.", "コンサートは8時に始まります。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

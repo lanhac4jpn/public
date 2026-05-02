@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関係代名詞 単文から作成 一般動詞 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">関係代名詞 単文から作成 一般動詞 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の2つの単文から関係代名詞を使って1つの英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["The man works at this school. He teaches English.", "The man who teaches English works at this school.", "英語を教えるその男性はこの学校で働いています。"],
+            ["The boy lives in Osaka. He likes soccer.", "The boy who likes soccer lives in Osaka.", "サッカーが好きなその少年は大阪に住んでいます。"],
+            ["The girl often studies math. She helps her mother.", "The girl who helps her mother often studies math.", "お母さんをよく手伝うその女の子は数学を勉強します。"],
+            ["The woman lives near here. She sings well.", "The woman who sings well lives near here.", "歌が上手なその女性はこの近くに住んでいます。"],
+            ["The boy writes a diary in English. He reads a book.", "The boy who reads a book writes a diary in English.", "本を読むその少年は英語で日記を書きます。"],
+            ["The girl goes to this school. She cooks dinner.", "The girl who cooks dinner goes to this school.", "夕食を作るその女の子はこの学校に通っています。"],
+            ["The man works in an office. He writes many letters.", "The man who writes many letters works in an office.", "たくさん手紙を書くその男性はオフィスで働いています。"],
+            ["The teacher also speaks English well. He/She teaches math.", "The teacher who teaches math also speaks English well.", "数学を教えるその先生は英語も上手に話します。"],
+            ["The girl often visits her grandmother. She plays the piano.", "The girl who plays the piano often visits her grandmother.", "ピアノを弾くその女の子はよくおばあさんを訪ねます。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

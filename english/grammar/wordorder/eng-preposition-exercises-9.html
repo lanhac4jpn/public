@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前置詞 behind / along / across</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">前置詞 behind / along / across</h1>
+
+    <!-- 単語の説明 -->
+    <section class="mt-4">
+        <h2>単語説明</h2>
+        <ul>
+            <li><strong>behin:</strong>〜の後ろに</li>
+            <li><strong>along:</strong>〜に沿って</li>
+            <li><strong>across:</strong>〜を横切って／〜の向こう側に</li>
+        </ul>
+    </section>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["the / behind / house / is / garden / the / .", "The garden is behind the house.", "その庭は家の後ろにあります。"],
+            ["tree / behind / the / dog / the / is / .", "The dog is behind the tree.", "その犬は木の後ろにいます。"],
+            ["stood / school / behind / the / we / .", "We stood behind the school.", "私たちは学校の後ろに立っていました。"],
+            ["the / along / river / walk / we / .", "We walk along the river.", "私たちは川に沿って歩きます。"],
+            ["along / street / the / there / are / shops / many / .", "There are many shops along the street.", "通りに沿ってたくさんの店があります。"],
+            ["flowers / along / planted / road / the / he / .", "He planted flowers along the road.", "彼は道に沿って花を植えました。"],
+            ["across / the / walked / street / she / .", "She walked across the street.", "彼女は通りを横切りました。"],
+            ["across / swim / lake / can / they / the / .", "They can swim across the lake.", "彼らは湖を泳いで渡ることができます。"],
+            ["the / across / bridge / is / river / the / .", "The bridge is across the river.", "その橋は川を横切っています。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

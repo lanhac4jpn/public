@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>助動詞 Would 否定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">助動詞 Would 否定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["go / would / not / I / there / .", "I would not go there.", "私はそこへ行かないでしょう。"],
+            ["I / not / eat / would / that / .", "I would not eat that.", "私はそれを食べないでしょう。"],
+            ["you / not / would / say / that / .", "You would not say that.", "あなたはそれを言わないでしょう。"],
+            ["help / would / not / you / me / .", "You would not help me.", "あなたは私を助けないでしょう。"],
+            ["he / not / would / play / baseball / .", "He would not play baseball.", "彼は野球をしないでしょう。"],
+            ["drink / coffee / not / would / he / .", "He would not drink coffee.", "彼はコーヒーを飲まないでしょう。"],
+            ["come / with / not / you / would / us / .", "You would not come with us.", "あなたは私たちと一緒に来ないでしょう。"],
+            ["not / would / we / visit / the / park / .", "We would not visit the park.", "私たちはその公園を訪れないでしょう。"],
+            ["they / not / would / read / this / book / .", "They would not read this book.", "彼らはこの本を読まないでしょう。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

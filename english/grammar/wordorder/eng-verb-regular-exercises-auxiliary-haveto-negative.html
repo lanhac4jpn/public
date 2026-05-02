@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>助動詞表現 have to 否定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">助動詞表現 have to 否定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["not / I / do / my / have / homework / to / .", "I do not have to do my homework.", "私は宿題をしなくてもいいです。"],
+            ["have / to / I / go / not / school / do / to / .", "I do not have to go to school.", "私は学校に行かなくてもいいです。"],
+            ["you / do / not / have / study / to / today / .", "You do not have to study today.", "あなたは今日は勉強しなくてもいいです。"],
+            ["help / not / do / to / have / parents / your / you / .", "You do not have to help your parents.", "あなたは両親を手伝わなくてもいいです。"],
+            ["he / not / to / does / school / go / have / to / .", "He does not have to go to school.", "彼は学校に行かなくてもいいです。"],
+            ["does / not / he / his / medicine / take / to / have / .", "He does not have to take his medicine.", "彼は薬を飲まなくてもいいです。"],
+            ["get / not / early / have / to / up / do / you / .", "You do not have to get up early.", "あなたは早起きしなくてもいいです。"],
+            ["clean / we / not / do / to / have / room / the / .", "We do not have to clean the room.", "私たちは部屋を掃除しなくてもいいです。"],
+            ["not / they / to / practice / baseball / have / do / .", "They do not have to practice baseball.", "彼らは野球を練習しなくてもいいです。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

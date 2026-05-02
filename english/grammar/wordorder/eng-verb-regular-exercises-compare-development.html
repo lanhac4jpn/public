@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比較発展 肯定文 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">比較発展 肯定文 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["study / harder / he / than / works / his / brother / .", "He works harder than his brother.", "彼は彼の兄より一生懸命働きます。"],
+            ["the / practice / the / you / better / become / more / , / you / .", "The more you practice, the better you become.", "練習すればするほど、上達します。"],
+            ["much / English / she / speaks / better / than / before / .", "She speaks English much better than before.", "彼女は以前よりずっと上手に英語を話します。"],
+            ["the / , / you / the / understand / more / read / more / you / .", "The more you read, the more you understand.", "読めば読むほど、理解できます。"],
+            ["is / this / book / interesting / than / much / that / one / .", "This book is much more interesting than that one.", "この本はあの本よりずっと面白いです。"],
+            ["faster / runs / he / than / any / boy / other / in / class / the / .", "He runs faster than any other boy in the class.", "彼はクラスのほかの誰よりも速く走ります。"],
+            ["the / play / you / better / piano / practice / , / the / more / you / .", "The more you practice, the better you play the piano.", "練習すればするほど、ピアノが上手になります。"],
+            ["more / became / far / city / beautiful / the / than / expected / I / .", "The city became far more beautiful than I expected.", "その町は私が予想していたよりはるかに美しくなりました。"],
+            ["get / older / become / we / wiser / the / , / the / we / .", "The older we get, the wiser we become.", "年をとればとるほど、私たちは賢くなります。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>

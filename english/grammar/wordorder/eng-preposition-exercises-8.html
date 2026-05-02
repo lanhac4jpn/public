@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前置詞 above/over/under/below</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <?php include 'eng-inc-close-btn.html'; ?>
+    <h1 class="title">前置詞 above/over/under/below</h1>
+
+    <!-- 単語の説明 -->
+    <section class="mt-4">
+        <h2>単語説明</h2>
+        <ul>
+            <li><strong>to（方向・目的地）:</strong>「〜へ」「〜に」</li>
+            <li><strong>to（相手）:</strong>「〜に（対して）」</li>
+        </ul>
+    </section>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["the / is / above / picture / the / desk / .", "The picture is above the desk.", "その絵は机の上のほうにあります。"],
+            ["the / sun / over / shines / the / mountains / .", "The sun shines over the mountains.", "太陽が山々の上に輝いています。"],
+            ["the / lives / below / family / us / .", "A family lives below us.", "私たちの下の階に家族が住んでいます。"],
+            ["the / cat / is / under / the / bed / .", "The cat is under the bed.", "その猫はベッドの下にいます。"],
+            ["the / airplane / flies / over / city / the / .", "The airplane flies over the city.", "飛行機が街の上を飛びます。"],
+            ["the / under / dog / table / the / is / .", "The dog is under the table.", "その犬はテーブルの下にいます。"],
+            ["the / lamp / above / hangs / the / table / .", "The lamp hangs above the table.", "ランプがテーブルの上に吊るされています。"],
+            ["the / temperature / below / is / zero / .", "The temperature is below zero.", "気温は氷点下です。"],
+            ["the / bridge / river / over / is / the / .", "The bridge is over the river.", "その橋は川の上にあります。"]
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>
