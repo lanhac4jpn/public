@@ -1,0 +1,74 @@
+.title {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-family: Meiryo;
+    background-color: #c91490;
+    border-radius: 0.25rem;
+    padding: 5px;
+}
+
+.title-red {
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    font-family: Meiryo;
+    background-color: red;
+    border-radius: 0.25rem;
+    padding: 5px;
+}
+
+.title-dodgerblue {
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    font-family: Meiryo;
+    background-color: #1e90ff;
+    border-radius: 0.25rem;
+    padding: 5px;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+.grammar-category {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-family: Meiryo;
+    background-color: #ac14c9;
+    border-radius: 0.25rem;
+    padding: 5px;
+    margin: 8px;
+}
+
+.close {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    background-color: #c91490;
+    border-radius: 0.25rem;
+    padding: 5px;
+    margin: 5px;
+}
+
+@media print{
+  .title, .title-red {
+      font-size: 15px;
+      color: black;
+      font-family: Meiryo;
+      background-color: #FFFFFF;
+      text-align: left;
+      padding: 0px;
+  }
+  .grammar-category {
+      font-size: 15px;
+      text-align: center;
+      color: white;
+      font-family: Meiryo;
+      background-color: #ac14c9;
+      border-radius: 0.25rem;
+  }
+}
+

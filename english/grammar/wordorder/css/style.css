@@ -1,0 +1,65 @@
+.title {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    background-color: #c91490;
+    border-radius: 0.25rem;
+    padding: 5px;
+}
+
+.close {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    background-color: #c91490;
+    border-radius: 0.25rem;
+    padding: 5px;
+    margin: 5px;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+.answer-area {
+    padding: 5px;
+}
+
+table > tbody > tr > td {
+    padding: 0px !important;
+}
+
+img {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    width:100px;
+    height:100px;
+}
+
+@media print{
+  button[type="button"], .close {
+      display: none;
+  }
+  .title {
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      background-color: #c91490;
+      border-radius: 0.25rem;
+  }
+  h2 {
+    /* フォントサイズをh3相当に */
+    font-size: 1.17em;
+    /* フォントの太さ */
+    font-weight: bold;
+  }
+  li, p {
+    font-size: 12px;
+  }
+  table > tbody > tr > td {
+      padding: 0px !important;
+      font-size: 12px;
+  }
+  
+}
