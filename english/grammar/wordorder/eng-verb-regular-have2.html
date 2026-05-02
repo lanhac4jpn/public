@@ -10,9 +10,10 @@
 <body class="container mt-5">
 
     <!-- タイトル -->
-    <?php include 'eng-inc-close-btn.html'; ?>
+    <close-btn></close-btn>
     <h1 class="title">have 「持っている」</h1>
 
+    <grammar-start></grammar-start>
     <!-- 文法の説明 -->
     <section class="mt-4">
         <h2>文法説明</h2>
@@ -22,11 +23,13 @@
             <li><strong>主語が He, She, It の場合:</strong> has を使う（例: He has a car.）</li>
         </ul>
     </section>
+    <grammar-end></grammar-end>
 
     <!-- 問題 -->
     <section>
         <h2>問題</h2>
         <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <img src="./eng-verb-regular-have2.png"/>
         <div id="question-area"></div>
     </section>
 
@@ -64,9 +67,11 @@
         // 画面に流し込む
         document.getElementById('question-area').innerHTML = allQuestionsHtml;
     </script>
+    <close-btn></close-btn>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/lettercut.js"></script>
+    <script src="../js/AnswerAreaIns.js"></script>
     <script src="../js/common-components.js"></script>
 </body>
 </html>
