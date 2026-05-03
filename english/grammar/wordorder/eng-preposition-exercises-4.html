@@ -10,7 +10,7 @@
 <body class="container mt-5">
 
     <!-- タイトル -->
-    <?php include 'eng-inc-close-btn.html'; ?>
+    <close-btn></close-btn>
     <h1 class="title">前置詞 in/on</h1>
 
     <!-- 単語の説明 -->
@@ -26,6 +26,7 @@
     <section>
         <h2>問題</h2>
         <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <img src="./eng-preposition-exercises-4.png"/>
         <div id="question-area"></div>
     </section>
 
@@ -62,9 +63,11 @@
         // 画面に流し込む
         document.getElementById('question-area').innerHTML = allQuestionsHtml;
     </script>
+    <close-btn></close-btn>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/lettercut.js"></script>
+    <script src="../js/AnswerAreaIns.js"></script>
     <script src="../js/common-components.js"></script>
 </body>
 </html>

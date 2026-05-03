@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>前置詞 to</title>
+    <title>前置詞 日付 in/on</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -11,14 +11,14 @@
 
     <!-- タイトル -->
     <close-btn></close-btn>
-    <h1 class="title">前置詞 to</h1>
+    <h1 class="title">前置詞 日付 in/on</h1>
 
     <!-- 単語の説明 -->
     <section class="mt-4">
         <h2>単語説明</h2>
         <ul>
-            <li><strong>to（方向・目的地）:</strong>「〜へ」「〜に」</li>
-            <li><strong>to（相手）:</strong>「〜に（対して）」</li>
+            <li><strong>by（手段）:</strong>「〜で（乗り物・通信・方法）」</li>
+            <li><strong>by（近く）:</strong>「〜のそばに」「〜の近くに」</li>
         </ul>
     </section>
 
@@ -26,21 +26,21 @@
     <section>
         <h2>問題</h2>
         <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
-        <img src="./eng-preposition-exercises-1.png"/>
+        <img src="./eng-preposition-exercises-6.png"/>
         <div id="question-area"></div>
     </section>
 
     <script>
         const questions = [
-            ["school / go / to / every / I / day / .", "I go to school every day.", "私は毎日学校へ行きます。"],
-            ["letter / her / to / wrote / friend / she / a / .", "She wrote a letter to her friend.", "彼女は友達に手紙を書きました。"],
-            ["to / the / he / goes / park / on / Sunday / .", "He goes to the park on Sunday.", "彼は日曜日に公園へ行きます。"],
-            ["teacher / students / the / to / talk / .", "The students talk to the teacher.", "生徒たちは先生に話しかけます。"],
-            ["to / Tokyo / went / we / yesterday / .", "We went to Tokyo yesterday.", "私たちは昨日東京へ行きました。"],
-            ["gave / to / I / her / the / book / .", "I gave the book to her.", "私はその本を彼女に渡しました。"],
-            ["to / dog / spoke / my / the / he / .", "He spoke to my dog.", "彼は私の犬に話しかけました。"],
-            ["to / children / presents / Santa / gave / the / .", "Santa gave presents to the children.", "サンタは子どもたちにプレゼントをあげました。"],
-            ["to / we / went / the / station / together / .", "We went to the station together.", "私たちはいっしょに駅へ行きました。"]
+            ["bus / school / go / I / to / by / .", "I go to school by bus.", "私はバスで学校へ行きます。"],
+            ["train / city / he / went / by / to / .", "He went to the city by train.", "彼は電車で街へ行きました。"],
+            ["by / letter / sent / she / a / .", "She sent a letter by mail.", "彼女は手紙を郵便で送りました。"],
+            ["the / sits / window / by / she / .", "She sits by the window.", "彼女は窓のそばに座っています。"],
+            ["by / the / lives / he / river / .", "He lives by the river.", "彼は川のそばに住んでいます。"],
+            ["by / sea / the / walk / I / sometimes / .", "I sometimes walk by the sea.", "私はときどき海のそばを歩きます。"],
+            ["airplane / traveled / they / by / .", "They traveled by airplane.", "彼らは飛行機で旅行しました。"],
+            ["is / tree / by / the / cat / the / .", "The cat is by the tree.", "その猫は木のそばにいます。"],
+            ["by / car / to / work / goes / he / .", "He goes to work by car.", "彼は車で仕事に行きます。"]
         ];
 
         let allQuestionsHtml = "";
