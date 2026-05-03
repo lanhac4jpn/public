@@ -10,16 +10,19 @@
 <body class="container mt-5">
 
     <!-- タイトル -->
-    <?php include 'eng-inc-close-btn.html'; ?>
+    <close-btn></close-btn>
     <h1 class="title">形式主語 否定文 確認テスト</h1>
 
     <!-- 問題 -->
     <section>
         <h2>問題</h2>
         <p>以下の単語を正しい語順に並べ替えて、正しい英文を作りましょう。</p>
+        <img src="./eng-verb-regular-exercises-itis-negative.png"/>
+        <div id="question-area"></div>
+    </section>
 
-        <?php
-        $questions = [
+    <script>
+        const questions = [
             ["not / it / is / study / English / to / difficult / .", "It is not difficult to study English.", "英語を勉強することは難しくありません。"],
             ["is / not / expensive / buy / it / to / this / book / .", "It is not expensive to buy this book.", "この本を買うことは高くありません。"],
             ["not / it / to / dangerous / is / play / soccer / .", "It is not dangerous to play soccer.", "サッカーをすることは危険ではありません。"],
@@ -31,27 +34,30 @@
             ["necessary / it / practice / not / is / to / every / day / .", "It is not necessary to practice every day.", "毎日練習することは必要ではありません。"]
         ];
 
-        $count = 1;
-        foreach ($questions as $q) {
-            echo "
-            <div class='mb-3'>
-                <p><strong>問題 {$count}:</strong> ({$q[0]}) - {$q[2]}</p>
-                <button class='btn btn-success' type='button' onclick='cleanText(this)'>英文削除</button>
-                <button class='btn btn-primary' type='button' data-bs-toggle='collapse' data-bs-target='#answer{$count}'>解答と解説</button>
-                <div class='collapse' id='answer{$count}'>
-                    <div class='card card-body mt-2'>
-                        <p><strong>解答:</strong> {$q[1]}</p>
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> (${q[0]}) - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
                     </div>
                 </div>
-            </div>";
-            $count++;
-        }
-        ?>
+            `;
+        });
 
-    </section>
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+    <close-btn></close-btn>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/lettercut.js"></script>
-    <script src="../js/AnswerAreaIns.js"></script>
+    <script src="../js/common-components.js"></script>
 </body>
 </html>
