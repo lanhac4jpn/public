@@ -23,6 +23,17 @@
         <button class="btn btn-success" type="button" onclick="cleanText(this)">英文削除</button>
     `);
 
+    // 5. QRタグを、PHPの中身と同じ「生文字列」に置換
+    // 正規表現を使って <qr-start></qr-start> を探します
+    bodyHtml = bodyHtml.replace(/<qr-start><\/qr-start>/g, `
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#qr-explanation">QR表示</button>
+        <div class="collapse show" id="qr-explanation">
+    `);
+
+    // 2. 文法説明終了タグを、単なる「</div>」に置換
+    bodyHtml = bodyHtml.replace(/<qr-end><\/qr-end>/g, '</div>');
+
+
     // 置換した「完成後の文字列」をbodyに戻す
     document.body.innerHTML = bodyHtml;
 })();
