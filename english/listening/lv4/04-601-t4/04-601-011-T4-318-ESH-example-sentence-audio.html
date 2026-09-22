@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>04-601-011-T4-318-ESH-example-sentence-audio</title>
+
+<base href="file:///C:/01_TeachingMaterials/Study/00_Environment/pythoncode/making_to_pdf4products/input/">
+
+<style>
+
+
+/* ==========================================================
+   style.less
+   ========================================================== */
+
+.markdown-preview.markdown-preview .product-sentence {
+ font-size: 14px;
+}
+.markdown-preview.markdown-preview .margin-top-30 {
+ margin-top: 30px;
+}
+.markdown-preview.markdown-preview .margin-top-50 {
+ margin-top: 50px;
+}
+.markdown-preview.markdown-preview p,
+.markdown-preview.markdown-preview li,
+.markdown-preview.markdown-preview table,
+.markdown-preview.markdown-preview figure {
+ font-size: 18px;
+}
+.markdown-preview.markdown-preview h3 {
+ font-size: 24px;
+}
+.markdown-preview.markdown-preview img {
+ display: inline-block;
+ vertical-align: top;
+ margin-right: 10px;
+ margin-bottom: 20px;
+ width: 100px;
+ height: 100px;
+}
+.markdown-preview.markdown-preview figure {
+ margin-left: 0px;
+}
+.markdown-preview.markdown-preview .bg-top-right {
+ position: fixed;
+ top: 10px;
+ right: 10px;
+ z-index: 1;
+ opacity: 0.3;
+}
+.markdown-preview.markdown-preview .product-title {
+ font-size: 24px;
+ font-weight: bold;
+ display: flex;
+ justify-content: center;
+}
+.markdown-preview.markdown-preview .product-title-jp {
+ font-size: 20px;
+ font-weight: bold;
+}
+.markdown-preview.markdown-preview .product-name {
+ font-size: 16px;
+ font-weight: bold;
+ justify-content: left;
+}
+.markdown-preview.markdown-preview .product-full-name {
+ font-size: 16px;
+ font-weight: bold;
+ justify-content: center;
+}
+.markdown-preview.markdown-preview .footer-copyright {
+ font-size: 16px;
+ display: flex;
+ justify-content: center;
+}
+@media print {
+ .markdown-preview.markdown-preview img {
+  display: inline-block !important;
+ }
+ .markdown-preview.markdown-preview figure {
+  display: none;
+ }
+ .markdown-preview.markdown-preview p,
+ .markdown-preview.markdown-preview li,
+ .markdown-preview.markdown-preview table,
+ .markdown-preview.markdown-preview figure {
+  font-size: 18px;
+ }
+}
+
+
+/* ==========================================================
+   index-style.css
+   ========================================================== */
+
+  /* A4 表紙用（余白ゼロ + 印刷色保持） */
+  @page { size: A4; margin: 0; }
+  html, body { height: 100%; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* 表紙全体のレイアウト */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;   /* 水平中央 */
+    align-items: center;       /* 垂直中央 */
+  }
+
+  /* 画像サイズ（はみ出し防止） */
+  .cover-image {
+    width: 50vh !important;
+    height: auto !important; /* タイトルのスペースを考慮 */
+  }
+
+  /* タイトル群 */
+  .title {
+    /*margin-top: 2.2vh;*/
+    text-align: center;
+    line-height: 1.35;
+  }
+  .title .sup   { font-size: 16px; }
+  .title .main  { font-size: 28px; font-weight: 700; }
+  .title .jp    { font-size: 18px; }
+
+
+
+/* ==========================================================
+   pdf-style.css
+   ========================================================== */
+
+@page {
+    size: A4;
+    margin: 15mm;
+}
+
+html,
+body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+
+</style>
+
+</head>
+
+<body for="html-export">
+
+<div class="crossnote markdown-preview">
+
+<div class="product-title product-name">318 英単語別例文</div>
+<div class="product-title">What Is a Typical Japanese Breakfast Like?</div>
+<div class="product-title product-title-jp">日本の朝ごはんってどんな感じ？</div>
+<hr />
+<ol>
+<li><strong>include</strong>（動詞）— ～を含む</li>
+<li><strong>sound</strong>（動詞）— ～のように聞こえる、～のように思える</li>
+<li><strong>become</strong>（動詞）— ～になる</li>
+</ol>
+<p><strong>1.include（～を含む）</strong></p>
+<ol>
+<li>My breakfast <strong>includes</strong> rice and fish.<br />
+　私の朝食にはご飯と魚が含まれています。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-01_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-01-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="2">
+<li>This meal <strong>includes</strong> miso soup.<br />
+　この食事にはみそ汁が含まれています。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-02_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-02-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="3">
+<li>Her breakfast <strong>includes</strong> some vegetables.<br />
+　彼女の朝食には野菜がいくらか含まれています。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-03_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-03-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="4">
+<li>The menu <strong>includes</strong> bread and eggs.<br />
+　そのメニューにはパンと卵が含まれています。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-04_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-04-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="5">
+<li>A Japanese breakfast often <strong>includes</strong> rice.<br />
+　日本の朝食にはよくご飯が含まれています。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-05_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-01-05-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<p><strong>2.sound（～のように聞こえる、思える）</strong></p>
+<ol>
+<li>That <strong>sounds</strong> delicious.<br />
+　それはおいしそうです。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-01_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-01-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="2">
+<li>Your breakfast <strong>sounds</strong> healthy.<br />
+　あなたの朝食は健康的に思えます。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-02_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-02-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="3">
+<li>That idea <strong>sounds</strong> good.<br />
+　その考えはよさそうです。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-03_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-03-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="4">
+<li>This meal <strong>sounds</strong> interesting.<br />
+　この食事は興味深そうです。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-04_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-04-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="5">
+<li>The new menu <strong>sounds</strong> great.<br />
+　その新しいメニューはとてもよさそうです。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-05_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-02-05-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<p><strong>3.become（～になる）</strong></p>
+<ol>
+<li>Breakfast habits have <strong>become</strong> more varied.<br />
+　朝食の習慣はより多様になってきました。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-01_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-01-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="2">
+<li>Japanese breakfasts have <strong>become</strong> more varied.<br />
+　日本の朝食はより多様になってきました。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-02_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-02-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="3">
+<li>Bread has <strong>become</strong> popular for breakfast.<br />
+　パンは朝食として人気になってきました。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-03_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-03-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="4">
+<li>This dish has <strong>become</strong> popular in Japan.<br />
+　この料理は日本で人気になってきました。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-04_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-04-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<ol start="5">
+<li>Our meals have <strong>become</strong> simpler.<br />
+　私たちの食事はより簡単になってきました。</li>
+</ol>
+<figure>
+  <figcaption>English</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-05_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+  <figcaption>Japanese</figcaption>
+    <audio controls>
+      <source src="04-601-011-T4-318-03-05-jpn_120wpm.wav" type="audio/wav">
+    この音声はお使いのブラウザでは再生できません。
+    </audio>
+</figure>
+<img src="./04-601-011-T4-318_audio.jpg"/>
+<div class="product-title product-full-name">04-601-011-T4 ESH - 英単語別例文 / Example Sentence</div>
+<div class="footer-copyright">© 2026 HACKERS All rights reserved.</div>
+
+
+</div>
+
+</body>
+
+</html>
