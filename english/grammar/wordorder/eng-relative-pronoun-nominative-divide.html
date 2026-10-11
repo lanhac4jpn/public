@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関係代名詞 主格 be動詞・一般動詞分割 確認テスト</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <!-- タイトル -->
+    <close-btn></close-btn>
+    <h1 class="title">関係代名詞 主格 be動詞・一般動詞分割 確認テスト</h1>
+
+    <!-- 問題 -->
+    <section>
+        <h2>問題</h2>
+        <p>以下の英文を2つの単文に分けた英文を作りましょう。</p>
+        <img src="./eng-relative-pronoun-nominative-concatenation.png"/>
+        <div id="question-area"></div>
+    </section>
+
+    <script>
+        const questions = [
+            ["The man who teaches English is Mr. Smith.", "The man is Mr. Smith. He teaches English.", "英語を教えるその男性はスミス先生です。"],
+            ["The boy who likes soccer lives in Osaka.", "The boy lives in Osaka. He likes soccer.", "サッカーが好きなその少年は大阪に住んでいます。"],
+            ["The woman who sings well lives near here.", "The woman lives near here. She sings well.", "歌が上手なその女性はこの近くに住んでいます。"],
+            ["The man who wrote that book is famous.", "The man is famous. He wrote that book.", "その本を書いた男性は有名です。"],
+            ["The boy who reads a book writes a diary in English.", "The boy writes a diary in English. He reads a book.", "本を読むその少年は英語で日記を書きます。"],
+            ["The man who helps his father is kind.", "The man is kind. He helps his father.", "お父さんを助けるその男性は親切です。"],
+            ["The girl who cooks dinner goes to this school.", "The girl goes to this school. She cooks dinner.", "夕食を作るその女の子はこの学校に通っています。"],
+            ["The teacher who teaches math also speaks English well.", "The teacher also speaks English well. The teacher teaches math.", "数学を教えるその先生は英語も上手に話します。"],
+            ["The woman who teaches math is Ms. Brown.", "The woman is Ms. Brown. She teaches math.", "数学を教えるその女性はブラウン先生です。"],
+        ];
+
+        let allQuestionsHtml = "";
+        questions.forEach((q, index) => {
+            const count = index + 1;
+            allQuestionsHtml += `
+                <div class="mb-3">
+                    <p><strong>問題 ${count}:</strong> ${q[0]} - ${q[2]}</p>
+                    <delete-btn></delete-btn>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#answer${count}">解答と解説</button>
+                    <div class="collapse" id="answer${count}">
+                        <div class="card card-body mt-2">
+                            <p><strong>解答:</strong> ${q[1]}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        // 画面に流し込む
+        document.getElementById('question-area').innerHTML = allQuestionsHtml;
+    </script>
+    <close-btn></close-btn>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lettercut.js"></script>
+    <script src="../js/AnswerAreaIns.js"></script>
+    <script src="../js/common-components.js"></script>
+</body>
+</html>
